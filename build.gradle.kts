@@ -16,12 +16,20 @@ repositories {
 }
 
 dependencies {
+	// Spring
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	// Kotlin
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
+	// Data Access
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	runtimeOnly("mysql:mysql-connector-java")
+
+	// Test
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
